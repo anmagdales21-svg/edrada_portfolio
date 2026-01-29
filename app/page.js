@@ -281,6 +281,12 @@ function LearningSection() {
           ))}
         </div>
       </div>
+      
+      {/* Decorative Elements */}
+      <div className="section-decoration">
+        <div className="decoration-circle decoration-circle-1"></div>
+        <div className="decoration-circle decoration-circle-2"></div>
+      </div>
     </section>
   )
 }
@@ -289,61 +295,131 @@ function LearningSection() {
 function ContactSection() {
   return (
     <section id="contact" className="section contact">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Get In Touch</h2>
-          <p className="section-subtitle">
-            Let's connect! I'm always open to discussing new opportunities and collaborations.
-          </p>
+      {/* Background Visual Elements */}
+      <div className="contact-bg-elements">
+        <div className="contact-bg-grid"></div>
+        <div className="contact-bg-bars">
+          <div className="bar bar-1"></div>
+          <div className="bar bar-2"></div>
+          <div className="bar bar-3"></div>
+          <div className="bar bar-4"></div>
+          <div className="bar bar-5"></div>
         </div>
-        
-        <div className="contact-grid">
-          <div className="contact-info">
-            <div className="contact-item">
-              <div className="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-              </div>
-              <div className="contact-text">
-                <h4>Email</h4>
-                <a href="mailto:anmagdales21@gmail.com">anmagdales21@gmail.com</a>
-              </div>
-            </div>
+        <div className="contact-bg-shapes">
+          <div className="shape shape-diamond"></div>
+          <div className="shape shape-circle"></div>
+          <div className="shape shape-dots"></div>
+        </div>
+      </div>
+      
+      <div className="container">
+        <div className="contact-wrapper">
+          {/* Email Form Card */}
+          <div className="email-form-card">
+            <h2 className="email-form-title">Email me</h2>
+            <p className="email-form-subtitle">
+              Looking for a systems analyst? Fill out the form and I'll get back to you!
+            </p>
             
-            <div className="contact-item">
-              <div className="contact-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                </svg>
+            <form 
+              className="email-form" 
+              action={`https://formsubmit.co/anmagdales21@gmail.com`}
+              method="POST"
+            >
+              {/* FormSubmit configuration */}
+              <input type="hidden" name="_subject" value="New Portfolio Contact!" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              
+              <div className="form-group">
+                <label htmlFor="name" className="form-label">Your Name</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  className="form-input" 
+                  placeholder="John Doe"
+                  required 
+                />
               </div>
-              <div className="contact-text">
-                <h4>GitHub</h4>
-                <a 
-                  href="https://github.com/anmagdales21-svg" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  github.com/anmagdales21-svg
+              
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">Your Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  className="form-input" 
+                  placeholder="john@example.com"
+                  required 
+                />
+              </div>
+              
+              <div className="form-group">
+                <label htmlFor="message" className="form-label">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  className="form-textarea" 
+                  placeholder="Tell me about your project..."
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              
+              <button type="submit" className="btn btn-primary btn-full">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+          
+          {/* Contact Info Side */}
+          <div className="contact-info-side">
+            <div className="contact-info-card">
+              <h3>Let's Connect</h3>
+              <p>
+                I'm currently looking for opportunities to contribute to meaningful projects 
+                and grow as a Computer Systems Analyst.
+              </p>
+              
+              <div className="contact-methods">
+                <a href="mailto:anmagdales21@gmail.com" className="contact-method">
+                  <div className="contact-method-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                  </div>
+                  <div className="contact-method-text">
+                    <span className="contact-method-label">Email</span>
+                    <span className="contact-method-value">anmagdales21@gmail.com</span>
+                  </div>
+                </a>
+                
+                <a href="https://github.com/anmagdales21-svg" target="_blank" rel="noopener noreferrer" className="contact-method">
+                  <div className="contact-method-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </div>
+                  <div className="contact-method-text">
+                    <span className="contact-method-label">GitHub</span>
+                    <span className="contact-method-value">anmagdales21-svg</span>
+                  </div>
                 </a>
               </div>
             </div>
-          </div>
-          
-          <div className="contact-cta">
-            <h3>Let's Build Something Together</h3>
-            <p>
-              I'm currently looking for opportunities to contribute to meaningful projects 
-              and grow as a Computer Systems Analyst.
-            </p>
-            <a href="mailto:anmagdales21@gmail.com" className="btn btn-primary">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              Send Me an Email
-            </a>
+            
+            {/* Decorative Quote */}
+            <div className="contact-quote">
+              <blockquote>
+                "Great systems are built through collaboration and understanding."
+              </blockquote>
+            </div>
           </div>
         </div>
       </div>
