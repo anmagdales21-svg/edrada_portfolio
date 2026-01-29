@@ -68,15 +68,12 @@ function HeroSection() {
         <div className="hero-visual">
           <div className="hero-image-container">
             <div className="hero-image-bg"></div>
-            <div style={{ 
-              width: '100%', 
-              aspectRatio: '1', 
-              display: 'flex', 
-              alignItems: 'center', 
-              justifyContent: 'center',
-              fontSize: '8rem'
-            }}>
-              💻
+            <div className="hero-profile-frame">
+              <img 
+                src="/profile.jpg" 
+                alt="An Edrada - Computer Systems Analyst"
+                className="hero-profile-image"
+              />
             </div>
           </div>
         </div>
