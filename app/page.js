@@ -68,12 +68,15 @@ function HeroSection() {
         <div className="hero-visual">
           <div className="hero-image-container">
             <div className="hero-image-bg"></div>
-            <div className="hero-profile-frame">
-              <img 
-                src="/profile.jpg" 
-                alt="An Edrada - Computer Systems Analyst"
-                className="hero-profile-image"
-              />
+            <div style={{ 
+              width: '100%', 
+              aspectRatio: '1', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              fontSize: '8rem'
+            }}>
+              💻
             </div>
           </div>
         </div>
@@ -90,17 +93,11 @@ function AboutSection() {
         <div className="about-grid">
           <div className="about-image-wrapper">
             <div className="about-image-container">
-              <div style={{ 
-                width: '100%', 
-                height: '100%', 
-                display: 'flex', 
-                alignItems: 'center', 
-                justifyContent: 'center',
-                fontSize: '6rem',
-                color: 'white'
-              }}>
-                👩‍💻
-              </div>
+              <img 
+                src="/profile.jpg" 
+                alt="An Edrada - Computer Systems Analyst"
+                className="about-profile-image"
+              />
             </div>
             <div className="about-image-decoration"></div>
           </div>
